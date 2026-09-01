@@ -1,1 +1,324 @@
-/* Add you CSS here */
+/* Global color palette and page setup */
+:root {
+  --bg: #fdf9f4;
+  --cream: #fffaf5;
+  --rose: #f6d9df;
+  --pink: #e7a9b4;
+  --lavender: #d8c7ef;
+  --sage: #bfd3bf;
+  --green: #7ea57d;
+  --dark: #2f2a2b;
+  --muted: #665d5e;
+  --white: #ffffff;
+  --shadow: rgba(114, 88, 94, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #fffaf7 0%, #f7efe9 100%);
+  color: var(--dark);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.page-shell {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+  padding: 30px 0 60px;
+}
+
+/* Header */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(126, 165, 125, 0.2);
+  border-radius: 999px;
+  padding: 18px 28px;
+  box-shadow: 0 10px 25px var(--shadow);
+  backdrop-filter: blur(5px);
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 70px 0 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.eyebrow {
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin: 0 0 16px;
+  line-height: 1.1;
+}
+
+.intro {
+  max-width: 520px;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.button {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--pink), var(--lavender));
+  color: var(--dark);
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 12px 20px rgba(231, 169, 180, 0.3);
+}
+
+.hero-art {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 360px;
+}
+
+.flower {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  background: linear-gradient(180deg, #f8f1f6 0%, #f2dfe7 100%);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 18px rgba(255, 255, 255, 0.4), 0 18px 40px rgba(177, 119, 140, 0.15);
+}
+
+.petal {
+  position: absolute;
+  width: 72px;
+  height: 90px;
+  background: linear-gradient(180deg, #f8d8e3 0%, #e9b3c6 100%);
+  border-radius: 60% 60% 50% 50%;
+  top: 16px;
+  left: 84px;
+  transform-origin: center bottom;
+}
+
+.petal-1 { transform: rotate(0deg) translateY(10px); }
+.petal-2 { transform: rotate(60deg) translateY(10px); }
+.petal-3 { transform: rotate(120deg) translateY(10px); }
+.petal-4 { transform: rotate(180deg) translateY(10px); }
+.petal-5 { transform: rotate(240deg) translateY(10px); }
+.petal-6 { transform: rotate(300deg) translateY(10px); }
+
+.center {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  background: radial-gradient(circle, #f9efab 0%, #f2d76d 100%);
+  border-radius: 50%;
+  top: 84px;
+  left: 84px;
+  box-shadow: 0 0 0 12px rgba(255, 255, 255, 0.35);
+}
+
+/* Section styling */
+.content-section {
+  margin-top: 40px;
+  padding: 30px 24px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 28px;
+  border: 1px solid rgba(126, 165, 125, 0.12);
+  box-shadow: 0 12px 25px rgba(82, 77, 80, 0.05);
+}
+
+.content-section h2 {
+  margin-top: 0;
+  margin-bottom: 22px;
+  font-size: clamp(1.9rem, 4vw, 2.5rem);
+  color: var(--dark);
+}
+
+/* Bio */
+.bio-layout {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.bio-card,
+.info-card {
+  flex: 1;
+  background: linear-gradient(135deg, #fffdfb 0%, #f8f1f3 100%);
+  border: 1px solid rgba(231, 169, 180, 0.2);
+  border-radius: 22px;
+  padding: 24px;
+}
+
+.bio-card p {
+  margin-top: 0;
+  margin-bottom: 18px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.bio-card p:last-child {
+  margin-bottom: 0;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.info-card div {
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 14px;
+}
+
+.label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+/* Skills */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.skills-list span {
+  background: linear-gradient(135deg, var(--sage), var(--lavender));
+  color: var(--dark);
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(126, 165, 125, 0.12);
+}
+
+/* Projects */
+.project-grid {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  flex: 1 1 260px;
+  background: linear-gradient(180deg, #fffdfd 0%, #f8f3ef 100%);
+  border: 1px solid rgba(168, 171, 211, 0.18);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(76, 63, 64, 0.06);
+}
+
+.project-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.image-one {
+  background: linear-gradient(135deg, rgba(233, 182, 203, 0.8), rgba(189, 215, 191, 0.6)),
+    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80');
+}
+
+.image-two {
+  background: linear-gradient(135deg, rgba(214, 204, 242, 0.75), rgba(247, 214, 187, 0.75)),
+    url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80');
+}
+
+.image-three {
+  background: linear-gradient(135deg, rgba(202, 233, 214, 0.72), rgba(240, 205, 223, 0.8)),
+    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80');
+}
+
+.project-card h3 {
+  margin: 20px 18px 10px;
+  font-size: 1.4rem;
+}
+
+.project-card p {
+  margin: 0 18px 22px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Responsive layout */
+@media (max-width: 760px) {
+  .topbar {
+    flex-direction: column;
+    border-radius: 24px;
+    gap: 10px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero,
+  .bio-layout {
+    flex-direction: column;
+  }
+
+  .hero {
+    padding-top: 45px;
+  }
+
+  .hero-text,
+  .hero-art {
+    width: 100%;
+  }
+}
