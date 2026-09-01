@@ -23,7 +23,7 @@ html {
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Times New Roman, Georgia, Garamond;
   background: linear-gradient(180deg, #fffaf7 0%, #f7efe9 100%);
   color: var(--dark);
 }
@@ -269,21 +269,21 @@ img {
   background-position: center;
 }
 
+
 .image-one {
   background: linear-gradient(135deg, rgba(233, 182, 203, 0.8), rgba(189, 215, 191, 0.6)),
-    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80');
+    url('https://goodr.com/cdn/shop/files/goodr_social_img_1200x630.png?v=1786662523');
 }
 
 .image-two {
   background: linear-gradient(135deg, rgba(214, 204, 242, 0.75), rgba(247, 214, 187, 0.75)),
-    url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80');
+    url('https://skylinecruises.com/wp-content/uploads/2023/07/skyline_jan21-1024x536.jpg');
 }
 
 .image-three {
   background: linear-gradient(135deg, rgba(202, 233, 214, 0.72), rgba(240, 205, 223, 0.8)),
-    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80');
+    url('https://www.chowhound.com/img/gallery/15-secrets-to-better-baking-according-to-experts/l-intro-1746446075.jpg');
 }
-
 .project-card h3 {
   margin: 20px 18px 10px;
   font-size: 1.4rem;
@@ -293,6 +293,40 @@ img {
   margin: 0 18px 22px;
   color: var(--muted);
   line-height: 1.7;
+}
+
+.contact-section {
+  margin-bottom: 20px;
+}
+
+.contact-box {
+  background: linear-gradient(135deg, #fff9f8 0%, #f5eef7 100%);
+  border: 1px solid rgba(231, 169, 180, 0.2);
+  border-radius: 22px;
+  padding: 28px;
+}
+
+.contact-box p {
+  margin-top: 0;
+  margin-bottom: 18px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.contact-links a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--dark);
+  background: linear-gradient(135deg, var(--rose), var(--sage));
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 700;
 }
 
 /* Responsive layout */
@@ -320,5 +354,9 @@ img {
   .hero-text,
   .hero-art {
     width: 100%;
+  }
+
+  .contact-links {
+    flex-direction: column;
   }
 }
